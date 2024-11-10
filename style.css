@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Big+Shoulders+Display&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --White: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+}
+
+.card{
+    width: 270px;
+    height: 425px;
+    padding: 1rem;
+    border: none;
+}
+
+.card-title{
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--Very-light-gray);
+}
+
+.card-text{
+    font-family: 'Lexend Deca';
+    font-size: 0.875rem;
+    color: var(--Very-light-gray);
+}
+
+.orange{
+    background-color: var(--Bright-orange);
+}
+
+.cyan{
+    background-color: var(--Dark-cyan);
+}
+
+.dark{
+    background-color: var(--Very-dark-cyan);
+}
+
+.btn-primary{
+    background-color: var(--Very-light-gray);
+    border-radius: 30px;
+    border: none;
+    display: block;
+    padding: 10px 35px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.875rem;
+}
+
+.btn-primary:hover{
+    background-color: transparent;
+    border: 2px var(--White) solid;
+    color: var(--White) !important;
+}
+
+.card-group .card:nth-child(1) .btn-primary {
+    color: var(--Bright-orange);
+}
+
+.card-group .card:nth-child(2) .btn-primary {
+    color: var(--Dark-cyan);
+}
+
+.card-group .card:nth-child(3) .btn-primary {
+    color: var(--Very-dark-cyan);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .card-text{
+        font-size: 0.75rem;
+        line-height: 1.9 !important;
+    }
+
+    .btn-primary{
+        margin-left: -15px;
+        margin-top: -30px;
+        width: 140px;
+        font-size: 0.75rem;
+    }
+
+    .card-group .card:nth-child(2) .btn-primary{
+        margin-top: 15px;
+    }
+
+    .card-group .card:nth-child(3) .btn-primary{
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    body{
+        padding: 2rem;
+    }
+
+    .card {
+        margin-bottom: 0 !important;
+    }
+
+    .orange{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .cyan{
+        border-radius: 0;
+    }
+
+    .dark{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+    }
+}
